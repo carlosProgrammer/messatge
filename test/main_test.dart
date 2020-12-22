@@ -1,11 +1,14 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:messatge/main.dart';
+import 'package:messatge/pages/ConversationPageList.dart';
 
 void main() {
-  testWidgets('Checking Hello World', (WidgetTester tester) async {
+  testWidgets('Main UI Test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(Messatge());
-    expect(find.text("Hello World!"), findsOneWidget);
+
+    expect(find.byType(ConversationPageList),findsOneWidget);
+
   });
 }

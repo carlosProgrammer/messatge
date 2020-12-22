@@ -4,13 +4,13 @@ import 'package:intl/intl.dart';
 import 'package:messatge/config/Palette.dart';
 
 class ChatItemWidget extends StatelessWidget{
-  var index;
+  final int index;
 
-  ChatItemWidget(this.index);
+  const ChatItemWidget(this.index);
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+
     if (index % 2 == 0) {
       //This is the sent message. We'll later use data from firebase instead of index to determine the message is sent or received.
       return Container(
