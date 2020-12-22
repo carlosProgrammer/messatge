@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import 'package:messatge/config/Palette.dart';
+import 'package:messatge/config/Styles.dart';
 
 class ChatItemWidget extends StatelessWidget{
   final int index;
@@ -10,7 +11,7 @@ class ChatItemWidget extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-
+    // TODO: implement build
     if (index % 2 == 0) {
       //This is the sent message. We'll later use data from firebase instead of index to determine the message is sent or received.
       return Container(
@@ -40,10 +41,7 @@ class ChatItemWidget extends StatelessWidget{
                     child: Text(
                       DateFormat('dd MMM kk:mm')
                           .format(DateTime.fromMillisecondsSinceEpoch(1565888474278)),
-                      style: TextStyle(
-                          color: Palette.greyColor,
-                          fontSize: 12.0,
-                          fontStyle: FontStyle.normal),
+                      style: Styles.date,
                     ),
                     margin: EdgeInsets.only(left: 5.0, top: 5.0, bottom: 5.0),
                   )])
@@ -73,10 +71,7 @@ class ChatItemWidget extends StatelessWidget{
               child: Text(
                 DateFormat('dd MMM kk:mm')
                     .format(DateTime.fromMillisecondsSinceEpoch(1565888474278)),
-                style: TextStyle(
-                    color: Palette.greyColor,
-                    fontSize: 12.0,
-                    fontStyle: FontStyle.normal),
+                style: Styles.date,
               ),
               margin: EdgeInsets.only(left: 5.0, top: 5.0, bottom: 5.0),
             )
